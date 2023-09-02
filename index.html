@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 class = "lotteryNum">Hoosier lottery numbers: </h1>
+    </div>
+    
+    <script>
+        let displayResponse=document.querySelector(".lotteryNum")
+
+
+
+        let ranNumString = "";
+        let i = 0;
+        //  Create a while loop that executes exactly 6 times.
+        while(i < 6){
+            // Generate a random number between 1 and 49
+            let randomNumber = Math.floor(Math.random() * 49) + 1;
+            // Add the random number to the string
+            ranNumString += randomNumber + " "; 
+            //increment the while loop
+            i++
+        }
+
+        // Display the string in a heading on the web page
+       displayResponse.textContent += ranNumString;
+
+    </script>
+</body>
+
+</html>
